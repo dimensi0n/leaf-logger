@@ -1,0 +1,23 @@
+{
+  "name": "leaf-logger",
+  "version": "0.1.0",
+  "description": "Simple text-formatter & file logger",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node tests/Logger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannSeget/leaf-logger.git"
+  },
+  "author": "Leafgard <dev@leafgard.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YannSeget/leaf-logger/issues"
+  },
+  "homepage": "https://github.com/YannSeget/leaf-logger#readme",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "dateformat": "^3.0.3"
+  }
+}
