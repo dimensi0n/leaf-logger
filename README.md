@@ -1,7 +1,9 @@
 # leaf-logger
 Simple text-formatter &amp; file logger
 
-<p align="center"><img src="https://i.imgur.com/qKMfJTc.png" style="border-radius: 3px"></p>
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+
+<p align="center"><img src="https://i.imgur.com/qKMfJTc.png" style="border-radius: 10px" width="600"></p>
 
 # Features
 * Empty the console when launching the application
