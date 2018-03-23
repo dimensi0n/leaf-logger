@@ -6,7 +6,7 @@
  * Logger entry point
  *
  * @package leaf-logger
- * @version 0.1.0
+ * @version 3.0.0
  * @author Leafgard <dev@leafgard.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  */
