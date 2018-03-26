@@ -6,7 +6,7 @@
  * Logger entry point
  *
  * @package leaf-logger
- * @version 3.0.0
+ * @version 3.1.0
  * @author Leafgard <dev@leafgard.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  */
@@ -24,6 +24,15 @@ module.exports = new ( function() {
     this.logPath = undefined
     this.defaultDateFormat = "HH:MM:ss TT"
     this.defaultColor = "white"
+    this.defaulTheme = {
+        error: 'red',
+        success: 'green',
+        info: 'cyan',
+        warn: 'yellow'
+    }
+
+    // Loading configuration
+    this.colors.setTheme(this.defaulTheme);
 
     /**
      * Add the desired path for log file and enable his usage
@@ -42,13 +51,21 @@ module.exports = new ( function() {
     this.setDateFormat = (format) => { this.defaultDateFormat = format }
 
     /**
+     * Sets a default theme to use
+     * @param {object} theme Object with theme properties
+     */
+    this.setTheme = (theme) => {
+        this.colors.setTheme(theme);
+    }
+
+    /**
      * Default error output
      * @param {string} Message Message to log
      * @param {string} Package Package name as prefix
      * @param {string} DateFormat Date format to use 
      */
     this.error = (Message, Package, DateFormat) => {
-        this.log(Message, Package, 'red', DateFormat)
+        this.log(Message, Package, this.colors.error, DateFormat)
     }
 
     /**
@@ -58,7 +75,7 @@ module.exports = new ( function() {
      * @param {string} DateFormat Date format to use 
      */
     this.success = (Message, Package, DateFormat) => {
-        this.log(Message, Package, 'green', DateFormat)
+        this.log(Message, Package, this.colors.success, DateFormat)
     }
 
     /**
@@ -68,7 +85,7 @@ module.exports = new ( function() {
      * @param {string} DateFormat Date format to use 
      */
     this.info = (Message, Package, DateFormat) => {
-        this.log(Message, Package, 'blue', DateFormat)
+        this.log(Message, Package, this.colors.info, DateFormat)
     }
 
     /**
@@ -78,7 +95,7 @@ module.exports = new ( function() {
      * @param {string} DateFormat Date format to use 
      */
     this.warn = (Message, Package, DateFormat) => {
-        this.log(Message, Package, 'yellow', DateFormat)
+        this.log(Message, Package, this.colors.warn, DateFormat)
     }
 
     /**
@@ -93,7 +110,11 @@ module.exports = new ( function() {
         let datePrefix = `[${date}]`
         let packagePrefix = Package ? ` [${Package}]` : ''
         let usedColor = Color ? Color : this.defaultColor
-        console.log(this.colors[usedColor](datePrefix + packagePrefix) + ` - ${Message}`)
+        if (typeof usedColor == "function") {
+            console.log(usedColor(datePrefix + packagePrefix) + ` - ${Message}`)
+        } else {
+            console.log(this.colors[usedColor](datePrefix + packagePrefix) + ` - ${Message}`)
+        }
         this.logInFile(datePrefix + packagePrefix + ` - ${Message}`)
     }
 

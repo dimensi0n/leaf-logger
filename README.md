@@ -41,19 +41,29 @@ You can use all the date formats from [DateFormat](https://www.npmjs.com/package
 Logger.setDateFormat('HH:MM')
 ```
 
+## Use a custom theme
+You can specify some custom colors to use for the default functions or to re-use individually in `.log()` function like that:
+```js
+Logger.setTheme({
+    success: 'grey', // Simple color
+    custom: 'rainbow' // Custom color for .log()
+})
+```
+All colors available to use are [here](https://www.npmjs.com/package/colors). Styles doesn't work at the moment.
+
 ## Methods
 
 ### Default function
 **`Logger.log(Message, Prefix, Color, DateFormat)`**
 
 ### Pre-defined functions
-**`Logger.success(Message, Prefix, DateFormat) // Green`**
+**`Logger.success(Message, Prefix, DateFormat) // Green by default`**
 
-**`Logger.error(Message, Prefix, DateFormat) // Red`**
+**`Logger.error(Message, Prefix, DateFormat) // Red by default`**
 
-**`Logger.info(Message, Prefix, DateFormat) // Blue`**
+**`Logger.info(Message, Prefix, DateFormat) // Cyan by default`**
 
-**`Logger.warn(Message, Prefix, DateFormat) // Yellow`**
+**`Logger.warn(Message, Prefix, DateFormat) // Yellow by default`**
 
 For each of these functions, only `Message` isn't optional, and color is `white` by default. `DateFormat` is the default one, except if you change it for **this** log !
 

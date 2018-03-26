@@ -21,6 +21,12 @@ Logger.log(`3 rows have been inserted`, `MySQL`, `cyan`, `HH:MM:ss`)
 // Set up a new default date format
 Logger.setDateFormat('HH:MM')
 
+// Set some new custom default colors
+Logger.setTheme({
+    success: 'white',
+    warn: 'blue'
+})
+
 // Default success output
 Logger.success(`Detected 3 new updates`)
 
