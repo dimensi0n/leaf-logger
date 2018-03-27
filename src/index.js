@@ -6,14 +6,14 @@
  * Logger entry point
  *
  * @package leaf-logger
- * @version 3.1.0
+ * @version 3.2.0
  * @author Leafgard <dev@leafgard.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  */
 module.exports = new ( function() {
 
     // Clears the console on every platform without JSDoc error
-    process.stdout.write('\x1Bc');
+    process.stdout.write('\x1Bc')
 
     // Loading dependencies
     this.colors = require('colors')
@@ -38,7 +38,7 @@ module.exports = new ( function() {
      * Add the desired path for log file and enable his usage
      * @param {string} logFilePath Path for log file
      */
-    this.useLogFile = (logFilePath) => {
+    this.setLogFile = (logFilePath) => {
         this.logPath = logFilePath
         let date = this.dateFormat(new Date(), this.defaultDateFormat)
         this.logInFile(`\r\n=== === [${date}] LAUNCHED NODE APP === ===`)
