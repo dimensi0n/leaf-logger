@@ -2,7 +2,7 @@
 var Logger = require(`../src/index.js`)
 
 // Enables log file and give log file`s path
-Logger.useLogFile(__dirname + `/logfile.txt`)
+Logger.setLogFile(__dirname + `/logfile.txt`)
 
 /**
  * Functions examples
@@ -24,7 +24,7 @@ Logger.setDateFormat('HH:MM')
 // Set some new custom default colors
 Logger.setTheme({
     success: 'white',
-    warn: 'blue'
+    warn: 'rainbow'
 })
 
 // Default success output

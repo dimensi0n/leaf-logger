@@ -11,7 +11,8 @@ Simple text-formatter &amp; file logger
 * Add an optional log file with custom location and name
 * Add a custom prefix (package name) for informations display
 * Custom date format for informations display
-* Pre-defined functions for errors, informations, successes and warnings 
+* Pre-defined functions for errors, informations, successes and warnings
+* Custom color theme is available to use
 
 # Installation
 ```bash
