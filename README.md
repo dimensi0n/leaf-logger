@@ -31,7 +31,7 @@ const Logger = require('leaf-logger')
 
 Logger has no log file by default. If you want one, you should declare it like that:
 ```js
-Logger.useLogFile(__dirname + '/logs.txt')
+Logger.setLogFile(__dirname + '/logs.txt')
 ```
 
 ## Use a different date format
