@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/YannSeget/leaf-logger.git"
   },
-  "author": "Leafgard <dev@leafgard.fr>",
+  "author": "Yann SEGET <dev@leafgard.fr>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/YannSeget/leaf-logger/issues"

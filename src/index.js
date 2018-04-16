@@ -1,14 +1,16 @@
 'use strict';
 
 /**
- * Simple text-formatter & file logger
+ * Simple text-formatter & file logger 
  *
  * Logger entry point
  *
  * @package leaf-logger
+ * @category Node.JS Package
  * @version 3.2.1
- * @author Leafgard <dev@leafgard.fr>
+ * @author Yann SEGET <dev@leafgard.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ * @link https://github.com/YannSeget/leaf-logger Project at GitHub
  */
 module.exports = new ( function() {
 
